@@ -10,12 +10,21 @@
 
 [data-theme="3"] {
   --color: #ffffff;
-  --background: rgba(52, 33, 38, 0.79);
+  --background: rgba(
+    52,
+    33,
+    38,
+    0.79
+  );
 }
 
 html {
-  background-color: var(--background);
-  color: var(--color);
+  background-color: var(
+    --background
+  );
+  color: var(
+    --color
+  );
 }
 
 .select {
