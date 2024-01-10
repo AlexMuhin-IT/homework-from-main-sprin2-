@@ -15,7 +15,11 @@ import HW15 from "../../hw15/HW15"
 
 function JuniorPlus() {
   return (
-    <div id={"hw5-page-junior-plus"}>
+    <div
+      id={
+        "hw5-page-junior-plus"
+      }
+    >
       {/*<HW10 />*/}
       {/*<HW11 />*/}
       {/*<HW12 />*/}
