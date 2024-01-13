@@ -7,18 +7,40 @@
   z-index: 1000;
   background-color: #fff;
   box-shadow:
-    0 1px 2px 0 rgba(29, 33, 38, 0.1),
-    0 10px 40px 0 rgba(29, 33, 38, 0.13);
+    0 1px
+      2px
+      0
+      rgba(
+        29,
+        33,
+        38,
+        0.1
+      ),
+    0 10px
+      40px
+      0
+      rgba(
+        29,
+        33,
+        38,
+        0.13
+      );
   color: white;
-  transition: transform 0.5s ease;
-  transform: translateX(-320px);
+  transition: transform
+    0.5s
+    ease;
+  transform: translateX(
+    -320px
+  );
 }
 
 .sidebar.open {
   width: 317px;
   height: 100%;
 
-  transform: translateX(0);
+  transform: translateX(
+    0
+  );
 }
 
 .background {
@@ -46,12 +68,14 @@
   text-decoration: none;
 }
 
-.nav a:hover {
+.nav
+  a:hover {
   color: #0059b2;
   text-decoration: underline;
 }
 
-.nav a.active {
+.nav
+  a.active {
   color: #58acff;
 }
 .close {
@@ -60,6 +84,7 @@
   right: 25px;
 }
 
-.close img {
+.close
+  img {
   display: block;
 }
