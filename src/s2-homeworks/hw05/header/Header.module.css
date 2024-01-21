@@ -5,12 +5,10 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 0
-    70px;
+  padding: 0 70px;
 }
 
-.header
-  h1 {
+.header h1 {
   font-weight: 600;
   font-size: 24px;
   color: #000;
