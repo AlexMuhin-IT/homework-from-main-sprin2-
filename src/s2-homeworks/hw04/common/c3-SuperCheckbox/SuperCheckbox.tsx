@@ -1,15 +1,31 @@
-import React, { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes } from "react"
+import React, {
+  ChangeEvent,
+  DetailedHTMLProps,
+  InputHTMLAttributes,
+} from "react"
 import s from "./SuperCheckbox.module.css"
 
 // тип пропсов обычного инпута
-type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+type DefaultInputPropsType =
+  DetailedHTMLProps<
+    InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  >
 
-type SuperCheckboxPropsType = Omit<DefaultInputPropsType, "type"> & {
-  onChangeChecked?: (checked: boolean) => void
-  spanClassName?: string
-}
+type SuperCheckboxPropsType =
+  Omit<
+    DefaultInputPropsType,
+    "type"
+  > & {
+    onChangeChecked?: (
+      checked: boolean,
+    ) => void
+    spanClassName?: string
+  }
 
-const SuperCheckbox: React.FC<SuperCheckboxPropsType> = ({
+const SuperCheckbox: React.FC<
+  SuperCheckboxPropsType
+> = ({
   onChange,
   onChangeChecked,
   className,
@@ -19,25 +35,60 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = ({
 
   ...restProps // все остальные пропсы попадут в объект restProps
 }) => {
-  const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-    onChange && onChange(e)
-    onChangeChecked && onChangeChecked(e.currentTarget.checked)
-  }
+  const onChangeCallback =
+    (
+      e: ChangeEvent<HTMLInputElement>,
+    ) => {
+      onChange &&
+        onChange(
+          e,
+        )
+      onChangeChecked &&
+        onChangeChecked(
+          e
+            .currentTarget
+            .checked,
+        )
+    }
 
   const finalInputClassName = `${s.checkbox} ${className ? " " + className : ""}`
 
   return (
-    <label className={s.label}>
+    <label
+      className={
+        s.label
+      }
+    >
       <input
-        id={id}
-        type={"checkbox"}
-        onChange={onChangeCallback}
-        className={finalInputClassName}
+        id={
+          id
+        }
+        type={
+          "checkbox"
+        }
+        onChange={
+          onChangeCallback
+        }
+        className={
+          finalInputClassName
+        }
         {...restProps} // отдаём инпуту остальные пропсы если они есть (checked например там внутри)
       />
       {children && (
-        <span id={id ? id + "-span" : undefined} className={s.spanClassName}>
-          {children}
+        <span
+          id={
+            id
+              ? id +
+                "-span"
+              : undefined
+          }
+          className={
+            s.spanClassName
+          }
+        >
+          {
+            children
+          }
         </span>
       )}
     </label> // благодаря label нажатие на спан передастся в инпут
