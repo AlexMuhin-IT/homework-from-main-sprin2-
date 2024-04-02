@@ -21,8 +21,7 @@ function Affair(
   const deleteCallback =
     () => {
       props.deleteAffairCallback(
-        props
-          .affair
+        props.affair
           ._id,
       )
     }
@@ -31,24 +30,21 @@ function Affair(
     s.name +
     " " +
     s2[
-      props
-        .affair
+      props.affair
         .priority
     ]
   const buttonClass =
     s.closeButton +
     " " +
     s2[
-      props
-        .affair
+      props.affair
         .priority
     ]
   const affairClass =
     s.affair +
     " " +
     s2[
-      props
-        .affair
+      props.affair
         .priority
     ]
 
@@ -56,8 +52,7 @@ function Affair(
     <div
       id={
         "hw2-affair-" +
-        props
-          .affair
+        props.affair
           ._id
       }
       className={
@@ -112,8 +107,7 @@ function Affair(
         }
       >
         {/*текст кнопки могут изменить студенты*/}
-        X
-        {/**/}
+        X{/**/}
       </button>
     </div>
   )
