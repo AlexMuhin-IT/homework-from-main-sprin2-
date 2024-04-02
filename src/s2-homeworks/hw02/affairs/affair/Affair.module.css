@@ -5,9 +5,7 @@
 
   border: 1.5px
     solid
-    var(
-      --color
-    );
+    var(--color);
   border-radius: 5px;
 }
 
@@ -30,9 +28,7 @@
   border: none;
   border-left: 1.5px
     solid
-    var(
-      --color
-    );
+    var(--color);
 
   font-weight: 900;
   cursor: pointer;
