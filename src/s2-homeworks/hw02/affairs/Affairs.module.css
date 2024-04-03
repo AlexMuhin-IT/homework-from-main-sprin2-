@@ -21,19 +21,15 @@
 }
 
 .button {
-  padding: 5px
-    15px;
+  padding: 5px 15px;
 
   background: transparent;
   color: var(
     --color
   );
 
-  border: 1px
-    solid
-    var(
-      --color
-    );
+  border: 1px solid
+    var(--color);
   border-radius: 15px;
   outline: none;
 
