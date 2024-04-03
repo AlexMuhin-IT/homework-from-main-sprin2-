@@ -92,9 +92,7 @@ function Affairs(
           key={
             a._id
           }
-          affair={
-            a
-          }
+          affair={a}
           deleteAffairCallback={
             props.deleteAffairCallback
           }
