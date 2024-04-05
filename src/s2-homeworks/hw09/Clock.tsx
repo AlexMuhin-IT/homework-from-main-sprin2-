@@ -9,13 +9,10 @@ function Clock() {
   const [
     timerId,
     setTimerId,
-  ] =
-    useState<
-      | number
-      | undefined
-    >(
-      undefined,
-    )
+  ] = useState<
+    | number
+    | undefined
+  >(undefined)
   const [
     date,
     setDate,
@@ -78,15 +75,11 @@ function Clock() {
 
   const onMouseEnter =
     () => {
-      setShow(
-        true,
-      )
+      setShow(true)
     }
   const onMouseLeave =
     () => {
-      setShow(
-        false,
-      )
+      setShow(false)
     }
   let formatterTime =
     new Intl.DateTimeFormat(
