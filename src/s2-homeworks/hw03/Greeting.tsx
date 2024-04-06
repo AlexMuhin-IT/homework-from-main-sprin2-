@@ -99,9 +99,7 @@ const Greeting: React.FC<
               s.error
             }
           >
-            {
-              error
-            }
+            {error}
           </div>
         </div>
 
