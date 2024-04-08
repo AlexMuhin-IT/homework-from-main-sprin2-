@@ -6,10 +6,9 @@ import s from "./Header.module.css"
 import { useLocation } from "react-router-dom"
 import { PATH } from "../Pages"
 
-type PropsType =
-  {
-    handleOpen: () => void
-  }
+type PropsType = {
+  handleOpen: () => void
+}
 
 export const Header: FC<
   PropsType
@@ -60,9 +59,7 @@ export const Header: FC<
           }
         />
         <h1>
-          {
-            pageName
-          }
+          {pageName}
         </h1>
       </div>
     </>
