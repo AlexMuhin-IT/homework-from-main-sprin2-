@@ -34,12 +34,8 @@ export const pureAddUser =
       addUserCallback(
         name,
       )
-      setName(
-        "",
-      )
-      setError(
-        "",
-      )
+      setName("")
+      setError("")
     } else {
       setError(
         "Ошибка! Введите имя!",
@@ -110,9 +106,7 @@ const GreetingContainer: React.FC<
           .value,
       )
       error &&
-        setError(
-          "",
-        )
+        setError("")
     }
   const addUser =
     () => {
@@ -133,33 +127,28 @@ const GreetingContainer: React.FC<
       )
     }
 
-  const onEnter =
-    (
-      e: KeyboardEvent<HTMLInputElement>,
-    ) => {
-      pureOnEnter(
-        e,
-        addUser,
-      )
-    }
+  const onEnter = (
+    e: KeyboardEvent<HTMLInputElement>,
+  ) => {
+    pureOnEnter(
+      e,
+      addUser,
+    )
+  }
 
   const totalUsers =
     users.length
   const lastUserName =
-    totalUsers >
-    0
+    totalUsers > 0
       ? users[
           totalUsers -
             1
-        ]
-          .name
+        ].name
       : ""
 
   return (
     <Greeting
-      name={
-        name
-      }
+      name={name}
       setNameCallback={
         setNameCallback
       }
@@ -172,9 +161,7 @@ const GreetingContainer: React.FC<
       onEnter={
         onEnter
       }
-      error={
-        error
-      }
+      error={error}
       totalUsers={
         totalUsers
       }
