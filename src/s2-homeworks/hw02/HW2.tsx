@@ -67,9 +67,7 @@ export const filterAffairs =
       return affairs
     } else {
       return affairs.filter(
-        (
-          affair,
-        ) =>
+        (affair) =>
           affair.priority ===
           filter,
       )
@@ -81,9 +79,7 @@ export const deleteAffair =
     _id: number,
   ): AffairType[] => {
     return affairs.filter(
-      (
-        affair,
-      ) =>
+      (affair) =>
         affair._id !==
         _id,
     )
@@ -93,12 +89,9 @@ function HW2() {
   const [
     affairs,
     setAffairs,
-  ] =
-    useState<
-      AffairType[]
-    >(
-      defaultAffairs,
-    )
+  ] = useState<
+    AffairType[]
+  >(defaultAffairs)
   const [
     filter,
     setFilter,
@@ -128,18 +121,13 @@ function HW2() {
     }
 
   return (
-    <div
-      id={
-        "hw2"
-      }
-    >
+    <div id={"hw2"}>
       <div
         className={
           s2.hwTitle
         }
       >
-        Homework
-        #2
+        Homework #2
       </div>
       <div
         className={
