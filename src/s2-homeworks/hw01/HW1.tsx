@@ -30,11 +30,10 @@ export const message0: MessageType =
         avatar,
       name: "Ivan",
     },
-    message:
-      {
-        text: "Hello, she didn’t do anything and rested all day, how are you?",
-        time: "00:00",
-      },
+    message: {
+      text: "Hello, she didn’t do anything and rested all day, how are you?",
+      time: "00:00",
+    },
   }
 export const friendMessage0: MessageType =
   {
@@ -44,57 +43,50 @@ export const friendMessage0: MessageType =
         avatar,
       name: "Ivan",
     },
-    message:
-      {
-        text: "Hello, how are you, what did you do yesterday?",
-        time: "00:00",
-      },
+    message: {
+      text: "Hello, how are you, what did you do yesterday?",
+      time: "00:00",
+    },
   }
 
-const HW1 =
-  () => {
-    return (
+const HW1 = () => {
+  return (
+    <div id={"hw1"}>
       <div
-        id={
-          "hw1"
+        className={
+          s2.hwTitle
         }
       >
-        <div
-          className={
-            s2.hwTitle
-          }
-        >
-          Homework
-          #1
-        </div>
-        <div
-          className={
-            s2.hw
-          }
-        >
-          {/*проверка отображения (не менять)*/}
-          <div>
-            <Message
-              message={
-                message0
-              }
-            />
-            <FriendMessage
-              message={
-                friendMessage0
-              }
-            />
-          </div>
-
-          {/*для автоматической проверки дз (не менять)*/}
-          <MessageSender
-            M={
-              Message
+        Homework #1
+      </div>
+      <div
+        className={
+          s2.hw
+        }
+      >
+        {/*проверка отображения (не менять)*/}
+        <div>
+          <Message
+            message={
+              message0
+            }
+          />
+          <FriendMessage
+            message={
+              friendMessage0
             }
           />
         </div>
+
+        {/*для автоматической проверки дз (не менять)*/}
+        <MessageSender
+          M={
+            Message
+          }
+        />
       </div>
-    )
-  }
+    </div>
+  )
+}
 
 export default HW1
