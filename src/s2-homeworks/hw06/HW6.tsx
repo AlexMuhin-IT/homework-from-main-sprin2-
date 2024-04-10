@@ -10,116 +10,108 @@ import s2 from "../../s1-main/App.module.css"
 import SuperButton from "../hw04/common/c2-SuperButton/SuperButton"
 import s from "./HW6.module.css"
 
-const HW6 =
-  () => {
-    const [
-      value,
-      setValue,
-    ] =
-      useState<string>(
-        "",
+const HW6 = () => {
+  const [
+    value,
+    setValue,
+  ] =
+    useState<string>(
+      "",
+    )
+
+  const save =
+    () => {
+      saveState(
+        "span-value",
+        value,
       )
-
-    const save =
-      () => {
-        saveState(
+    }
+  const restore =
+    () => {
+      setValue(
+        restoreState(
           "span-value",
-          value,
-        )
-      }
-    const restore =
-      () => {
-        setValue(
-          restoreState(
-            "span-value",
-            "",
-          ),
-        )
-      }
+          "",
+        ),
+      )
+    }
 
-    return (
+  return (
+    <div id={"hw6"}>
       <div
-        id={
-          "hw6"
+        className={
+          s2.hwTitle
+        }
+      >
+        Homework #6
+      </div>
+
+      {/*демонстрация возможностей компоненты:*/}
+      <div
+        className={
+          s2.hw
         }
       >
         <div
           className={
-            s2.hwTitle
+            s.editableSpanContainer
           }
         >
-          Homework
-          #6
+          <SuperEditableSpan
+            id={
+              "hw6-spanable-input"
+            }
+            value={
+              value
+            }
+            onChangeText={
+              setValue
+            }
+            spanProps={{
+              id: "hw6-editable-span",
+              defaultText:
+                "Edit text...",
+            }}
+          />
         </div>
 
-        {/*демонстрация возможностей компоненты:*/}
         <div
           className={
-            s2.hw
+            s.buttonsContainer
           }
         >
-          <div
-            className={
-              s.editableSpanContainer
+          <SuperButton
+            id={
+              "hw6-save"
+            }
+            onClick={
+              save
+            }
+            xType={
+              "default"
             }
           >
-            <SuperEditableSpan
-              id={
-                "hw6-spanable-input"
-              }
-              value={
-                value
-              }
-              onChangeText={
-                setValue
-              }
-              spanProps={{
-                id: "hw6-editable-span",
-                defaultText:
-                  "Edit text...",
-              }}
-            />
-          </div>
-
-          <div
-            className={
-              s.buttonsContainer
+            Save to
+            ls
+          </SuperButton>
+          <SuperButton
+            id={
+              "hw6-restore"
+            }
+            onClick={
+              restore
+            }
+            xType={
+              "secondary"
             }
           >
-            <SuperButton
-              id={
-                "hw6-save"
-              }
-              onClick={
-                save
-              }
-              xType={
-                "default"
-              }
-            >
-              Save
-              to
-              ls
-            </SuperButton>
-            <SuperButton
-              id={
-                "hw6-restore"
-              }
-              onClick={
-                restore
-              }
-              xType={
-                "secondary"
-              }
-            >
-              Get
-              from
-              ls
-            </SuperButton>
-          </div>
+            Get from
+            ls
+          </SuperButton>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
+}
 
 export default HW6
