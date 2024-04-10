@@ -33,8 +33,7 @@
 }
 .item {
   border-bottom: 1px
-    solid
-    #ddd;
+    solid #ddd;
 }
 
 .item:last-of-type {
