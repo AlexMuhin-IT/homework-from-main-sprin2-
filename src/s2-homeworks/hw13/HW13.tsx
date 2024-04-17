@@ -10,352 +10,313 @@ import error400 from "./images/400.svg"
 import error500 from "./images/500.svg"
 import errorUnknown from "./images/error.svg"
 
-const HW13 =
-  () => {
-    const [
-      code,
-      setCode,
-    ] =
-      useState(
-        "",
+const HW13 = () => {
+  const [
+    code,
+    setCode,
+  ] = useState("")
+  const [
+    text,
+    setText,
+  ] = useState("")
+  const [
+    info,
+    setInfo,
+  ] = useState("")
+  const [
+    image,
+    setImage,
+  ] = useState("")
+
+  const [
+    loading,
+    setLoading,
+  ] =
+    useState(false)
+
+  const send =
+    (
+      x?:
+        | boolean
+        | null,
+    ) =>
+    () => {
+      const url =
+        x === null
+          ? "https://xxxxxx.ccc"
+          : "https://samurai.it-incubator.io/api/3.0/homework/test"
+
+      setCode("")
+      setImage("")
+      setText("")
+      setInfo(
+        "...loading",
       )
-    const [
-      text,
-      setText,
-    ] =
-      useState(
-        "",
-      )
-    const [
-      info,
-      setInfo,
-    ] =
-      useState(
-        "",
-      )
-    const [
-      image,
-      setImage,
-    ] =
-      useState(
-        "",
+      setLoading(
+        true,
       )
 
-    const [
-      loading,
-      setLoading,
-    ] =
-      useState(
-        false,
-      )
-
-    const send =
-
-        (
-          x?:
-            | boolean
-            | null,
-        ) =>
-        () => {
-          const url =
-            x ===
-            null
-              ? "https://xxxxxx.ccc"
-              : "https://samurai.it-incubator.io/api/3.0/homework/test"
-
-          setCode(
-            "",
-          )
-          setImage(
-            "",
-          )
-          setText(
-            "",
-          )
-          setInfo(
-            "...loading",
-          )
-          setLoading(
-            true,
-          )
-
-          axios
-            .post(
-              url,
-              {
-                success:
-                  x,
-              },
+      axios
+        .post(url, {
+          success:
+            x,
+        })
+        .then(
+          (res) => {
+            setCode(
+              "Код " +
+                res.status +
+                "!",
             )
-            .then(
-              (
-                res,
-              ) => {
-                setCode(
-                  "Код " +
-                    res.status +
-                    "!",
-                )
-                setImage(
-                  success200,
-                )
-                setText(
-                  res
-                    .data
-                    .errorText,
-                )
-                setInfo(
-                  res
-                    .data
-                    .info,
-                )
-              },
+            setImage(
+              success200,
             )
-            .catch(
-              (
-                e,
-              ) => {
-                console.log(
-                  e,
-                )
-                if (
-                  e
-                    .response
-                    .status ===
-                  400
-                ) {
-                  setCode(
-                    `Ошибка ${e.response.status} !`,
-                  )
-                  setText(
-                    e
-                      .response
-                      .data
-                      .errorText,
-                  )
-                  setInfo(
-                    e
-                      .response
-                      .data
-                      .info,
-                  )
-                  setImage(
-                    error400,
-                  )
-                  return
-                }
-                if (
-                  e
-                    .response
-                    .status ===
-                  500
-                ) {
-                  setCode(
-                    `Ошибка ${e.response.status}!`,
-                  )
-                  setText(
-                    e
-                      .response
-                      .data
-                      .errorText,
-                  )
-                  setInfo(
-                    e
-                      .response
-                      .data
-                      .info,
-                  )
-                  setImage(
-                    error500,
-                  )
-                  return
-                }
-                setCode(
-                  "Error!",
-                )
-                setText(
-                  e.message,
-                )
-                setInfo(
-                  e.name,
-                )
-                setImage(
-                  errorUnknown,
-                )
-              },
+            setText(
+              res
+                .data
+                .errorText,
             )
-            .finally(
-              () => {
-                setLoading(
-                  false,
-                )
-              },
+            setInfo(
+              res
+                .data
+                .info,
             )
-        }
+          },
+        )
+        .catch(
+          (e) => {
+            console.log(
+              e,
+            )
+            if (
+              e
+                .response
+                .status ===
+              400
+            ) {
+              setCode(
+                `Ошибка ${e.response.status} !`,
+              )
+              setText(
+                e
+                  .response
+                  .data
+                  .errorText,
+              )
+              setInfo(
+                e
+                  .response
+                  .data
+                  .info,
+              )
+              setImage(
+                error400,
+              )
+              return
+            }
+            if (
+              e
+                .response
+                .status ===
+              500
+            ) {
+              setCode(
+                `Ошибка ${e.response.status}!`,
+              )
+              setText(
+                e
+                  .response
+                  .data
+                  .errorText,
+              )
+              setInfo(
+                e
+                  .response
+                  .data
+                  .info,
+              )
+              setImage(
+                error500,
+              )
+              return
+            }
+            setCode(
+              "Error!",
+            )
+            setText(
+              e.message,
+            )
+            setInfo(
+              e.name,
+            )
+            setImage(
+              errorUnknown,
+            )
+          },
+        )
+        .finally(
+          () => {
+            setLoading(
+              false,
+            )
+          },
+        )
+    }
 
-    return (
+  return (
+    <div
+      id={"hw13"}
+    >
       <div
-        id={
-          "hw13"
+        className={
+          s2.hwTitle
+        }
+      >
+        Homework #13
+      </div>
+      <div
+        className={
+          s2.hw
         }
       >
         <div
           className={
-            s2.hwTitle
+            s.buttonsContainer
           }
         >
-          Homework
-          #13
+          <SuperButton
+            id={
+              "hw13-send-true"
+            }
+            onClick={send(
+              true,
+            )}
+            xType={
+              "secondary"
+            }
+            disabled={
+              loading
+            }
+          >
+            Send
+            true
+          </SuperButton>
+          <SuperButton
+            id={
+              "hw13-send-false"
+            }
+            onClick={send(
+              false,
+            )}
+            xType={
+              "secondary"
+            }
+            disabled={
+              loading
+            }
+          >
+            Send
+            false
+          </SuperButton>
+          <SuperButton
+            id={
+              "hw13-send-undefined"
+            }
+            onClick={send(
+              undefined,
+            )}
+            xType={
+              "secondary"
+            }
+            disabled={
+              loading
+            }
+          >
+            Send
+            undefined
+          </SuperButton>
+          <SuperButton
+            id={
+              "hw13-send-null"
+            }
+            onClick={send(
+              null,
+            )}
+            xType={
+              "secondary"
+            }
+            disabled={
+              loading
+            }
+          >
+            Send
+            null
+          </SuperButton>
         </div>
+
         <div
           className={
-            s2.hw
+            s.responseContainer
           }
         >
           <div
             className={
-              s.buttonsContainer
+              s.imageContainer
             }
           >
-            <SuperButton
-              id={
-                "hw13-send-true"
-              }
-              onClick={send(
-                true,
-              )}
-              xType={
-                "secondary"
-              }
-              disabled={
-                loading
-              }
-            >
-              Send
-              true
-            </SuperButton>
-            <SuperButton
-              id={
-                "hw13-send-false"
-              }
-              onClick={send(
-                false,
-              )}
-              xType={
-                "secondary"
-              }
-              disabled={
-                loading
-              }
-            >
-              Send
-              false
-            </SuperButton>
-            <SuperButton
-              id={
-                "hw13-send-undefined"
-              }
-              onClick={send(
-                undefined,
-              )}
-              xType={
-                "secondary"
-              }
-              disabled={
-                loading
-              }
-            >
-              Send
-              undefined
-            </SuperButton>
-            <SuperButton
-              id={
-                "hw13-send-null"
-              }
-              onClick={send(
-                null,
-              )}
-              xType={
-                "secondary"
-              }
-              disabled={
-                loading
-              }
-            >
-              Send
-              null
-            </SuperButton>
+            {image && (
+              <img
+                src={
+                  image
+                }
+                className={
+                  s.image
+                }
+                alt="status"
+              />
+            )}
           </div>
 
           <div
             className={
-              s.responseContainer
+              s.textContainer
             }
           >
             <div
+              id={
+                "hw13-code"
+              }
               className={
-                s.imageContainer
+                s.code
               }
             >
-              {image && (
-                <img
-                  src={
-                    image
-                  }
-                  className={
-                    s.image
-                  }
-                  alt="status"
-                />
-              )}
+              {code}
             </div>
-
             <div
+              id={
+                "hw13-text"
+              }
               className={
-                s.textContainer
+                s.text
               }
             >
-              <div
-                id={
-                  "hw13-code"
-                }
-                className={
-                  s.code
-                }
-              >
-                {
-                  code
-                }
-              </div>
-              <div
-                id={
-                  "hw13-text"
-                }
-                className={
-                  s.text
-                }
-              >
-                {
-                  text
-                }
-              </div>
-              <div
-                id={
-                  "hw13-info"
-                }
-                className={
-                  s.info
-                }
-              >
-                {
-                  info
-                }
-              </div>
+              {text}
+            </div>
+            <div
+              id={
+                "hw13-info"
+              }
+              className={
+                s.info
+              }
+            >
+              {info}
             </div>
           </div>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
+}
 
 export default HW13
