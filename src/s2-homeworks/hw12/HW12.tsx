@@ -27,97 +27,84 @@ export const themes =
     },
     {
       id: 2,
-      value:
-        "blue",
+      value: "blue",
     },
     {
       id: 3,
-      value:
-        "dark",
+      value: "dark",
     },
   ]
 
-const HW12 =
-  () => {
-    const themeId =
-      useSelector<
-        AppStoreType,
-        number
-      >(
-        (
-          state,
-        ) =>
-          state
-            .theme
-            .themeId,
-      )
-    const dispatch =
-      useDispatch()
-    console.log(
-      themeId,
+const HW12 = () => {
+  const themeId =
+    useSelector<
+      AppStoreType,
+      number
+    >(
+      (state) =>
+        state.theme
+          .themeId,
     )
-    const change =
-      (
-        id: any,
-      ) => {
-        dispatch(
-          changeThemeId(
-            id,
-          ),
-        )
-      }
-
-    useEffect(() => {
-      document.documentElement.dataset.theme =
-        themeId +
-        ""
-    }, [
-      themeId,
-    ])
-
-    return (
-      <div
-        id={
-          "hw12"
-        }
-      >
-        <div
-          id={
-            "hw12-text"
-          }
-          className={
-            s2.hwTitle
-          }
-        >
-          Homework
-          #12
-        </div>
-
-        <div
-          className={
-            s2.hw
-          }
-        >
-          <SuperSelect
-            id={
-              "hw12-select-theme"
-            }
-            className={
-              s.select
-            }
-            value={
-              themeId
-            }
-            onChangeOption={
-              change
-            }
-            options={
-              themes
-            }
-          />
-        </div>
-      </div>
+  const dispatch =
+    useDispatch()
+  console.log(
+    themeId,
+  )
+  const change = (
+    id: any,
+  ) => {
+    dispatch(
+      changeThemeId(
+        id,
+      ),
     )
   }
+
+  useEffect(() => {
+    document.documentElement.dataset.theme =
+      themeId + ""
+  }, [themeId])
+
+  return (
+    <div
+      id={"hw12"}
+    >
+      <div
+        id={
+          "hw12-text"
+        }
+        className={
+          s2.hwTitle
+        }
+      >
+        Homework #12
+      </div>
+
+      <div
+        className={
+          s2.hw
+        }
+      >
+        <SuperSelect
+          id={
+            "hw12-select-theme"
+          }
+          className={
+            s.select
+          }
+          value={
+            themeId
+          }
+          onChangeOption={
+            change
+          }
+          options={
+            themes
+          }
+        />
+      </div>
+    </div>
+  )
+}
 
 export default HW12
