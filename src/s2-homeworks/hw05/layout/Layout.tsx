@@ -7,10 +7,9 @@ import React, {
 import { Header } from "../header/Header"
 import { Sidebar } from "../sidebar/Sidebar"
 
-type PropsType =
-  {
-    children: ReactNode
-  }
+type PropsType = {
+  children: ReactNode
+}
 
 export const Layout: FC<
   PropsType
@@ -21,19 +20,13 @@ export const Layout: FC<
     open,
     setOpen,
   ] =
-    useState(
-      false,
-    )
+    useState(false)
   const handleClose =
     () =>
-      setOpen(
-        false,
-      )
+      setOpen(false)
   const handleOpen =
     () =>
-      setOpen(
-        true,
-      )
+      setOpen(true)
 
   useEffect(() => {
     open &&
@@ -42,16 +35,12 @@ export const Layout: FC<
     !open &&
       (document.body.style.overflow =
         "unset")
-  }, [
-    open,
-  ])
+  }, [open])
 
   return (
     <>
       <Sidebar
-        open={
-          open
-        }
+        open={open}
         handleClose={
           handleClose
         }
@@ -62,9 +51,7 @@ export const Layout: FC<
         }
       />
       <div>
-        {
-          children
-        }
+        {children}
       </div>
     </>
   )
