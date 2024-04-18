@@ -1,8 +1,6 @@
-const initState =
-  {
-    isLoading:
-      false,
-  }
+const initState = {
+  isLoading: false,
+}
 
 export const loadingReducer =
   (
