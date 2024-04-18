@@ -6,12 +6,8 @@ export const Loader =
     return (
       <React.Fragment>
         <svg
-          width={
-            0
-          }
-          height={
-            0
-          }
+          width={0}
+          height={0}
         >
           <defs>
             <linearGradient
@@ -33,9 +29,7 @@ export const Loader =
           </defs>
         </svg>
         <CircularProgress
-          size={
-            110
-          }
+          size={110}
           sx={{
             "svg circle":
               {
