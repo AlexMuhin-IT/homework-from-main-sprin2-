@@ -8,9 +8,7 @@ import s from "./MessageSender.module.css"
 
 // компонента, которая тестирует вашу компоненту (не изменять, any не трогать)
 const MessageSender =
-  (
-    props: any,
-  ) => {
+  (props: any) => {
     const M =
       props.M
     const textareaRef =
@@ -20,12 +18,9 @@ const MessageSender =
     const [
       messages,
       setMessages,
-    ] =
-      useState<
-        any[]
-      >(
-        [],
-      )
+    ] = useState<
+      any[]
+    >([])
     const [
       text,
       setText,
@@ -35,9 +30,7 @@ const MessageSender =
       )
 
     const onChange =
-      (
-        e: any,
-      ) => {
+      (e: any) => {
         setText(
           e
             .currentTarget
@@ -57,9 +50,7 @@ const MessageSender =
             .scrollHeight +
           "px"
       }
-    }, [
-      text,
-    ])
+    }, [text])
 
     const addMessage =
       () => {
@@ -95,9 +86,7 @@ const MessageSender =
       }
 
     const onKeyDown =
-      (
-        e: any,
-      ) => {
+      (e: any) => {
         e.key ===
           "Enter" &&
           e.shiftKey &&
@@ -107,9 +96,7 @@ const MessageSender =
     return (
       <>
         {messages.map(
-          (
-            m,
-          ) => (
+          (m) => (
             <M
               key={
                 "message" +
