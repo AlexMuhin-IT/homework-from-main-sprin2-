@@ -6,11 +6,10 @@ import s from "./Sidebar.module.css"
 import { PATH } from "../Pages"
 import closeIcon from "./closeOutline.svg"
 
-type PropsType =
-  {
-    open: boolean
-    handleClose: () => void
-  }
+type PropsType = {
+  open: boolean
+  handleClose: () => void
+}
 
 export const Sidebar: FC<
   PropsType
@@ -21,8 +20,7 @@ export const Sidebar: FC<
   const sidebarClass =
     s.sidebar +
     (open
-      ? " " +
-        s.open
+      ? " " + s.open
       : "")
 
   return (
