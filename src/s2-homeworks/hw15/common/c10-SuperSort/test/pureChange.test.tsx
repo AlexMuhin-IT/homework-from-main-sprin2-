@@ -10,9 +10,7 @@ test('sort ""', () => {
     )
   expect(
     newSort,
-  ).toBe(
-    "1a",
-  )
+  ).toBe("1a")
 })
 test('sort "1a"', () => {
   const newSort =
@@ -23,9 +21,7 @@ test('sort "1a"', () => {
     )
   expect(
     newSort,
-  ).toBe(
-    "0a",
-  )
+  ).toBe("0a")
 })
 test('sort "0a"', () => {
   const newSort =
@@ -36,9 +32,7 @@ test('sort "0a"', () => {
     )
   expect(
     newSort,
-  ).toBe(
-    "",
-  )
+  ).toBe("")
 })
 test('sort "1b"', () => {
   const newSort =
@@ -49,7 +43,5 @@ test('sort "1b"', () => {
     )
   expect(
     newSort,
-  ).toBe(
-    "1a",
-  )
+  ).toBe("1a")
 })
