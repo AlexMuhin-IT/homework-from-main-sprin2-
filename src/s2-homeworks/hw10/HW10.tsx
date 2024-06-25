@@ -16,90 +16,84 @@ import { Loader } from "./Loader"
  * 4 - сделать стили в соответствии с дизайном
  * */
 
-const HW10 =
-  () => {
-    const isLoading =
-      useSelector<
-        AppStoreType,
-        boolean
-      >(
-        (
-          state,
-        ) =>
-          state
-            .loading
-            .isLoading,
+const HW10 = () => {
+  const isLoading =
+    useSelector<
+      AppStoreType,
+      boolean
+    >(
+      (state) =>
+        state
+          .loading
+          .isLoading,
+    )
+  const dispatch =
+    useDispatch()
+
+  const setLoading =
+    () => {
+      dispatch(
+        loadingAC(
+          true,
+        ),
       )
-    const dispatch =
-      useDispatch()
 
-    const setLoading =
-      () => {
-        dispatch(
-          loadingAC(
-            true,
-          ),
-        )
+      setTimeout(
+        () => {
+          dispatch(
+            loadingAC(
+              false,
+            ),
+          )
+        },
+        1500,
+      )
+    }
 
-        setTimeout(
-          () => {
-            dispatch(
-              loadingAC(
-                false,
-              ),
-            )
-          },
-          1500,
-        )
-      }
-
-    return (
+  return (
+    <div
+      id={"hw10"}
+    >
       <div
-        id={
-          "hw10"
+        className={
+          s2.hwTitle
         }
       >
-        <div
-          className={
-            s2.hwTitle
-          }
-        >
-          Homework
-          #10
-        </div>
-
-        <div
-          className={
-            s2.hw
-          }
-        >
-          {isLoading ? (
-            <div
-              id={
-                "hw10-loading"
-              }
-            >
-              <Loader />
-            </div>
-          ) : (
-            <SuperButton
-              id={
-                "hw10-button-start-loading"
-              }
-              onClick={
-                setLoading
-              }
-              xType={
-                "default"
-              }
-            >
-              Set
-              loading...
-            </SuperButton>
-          )}
-        </div>
+        Homework #10
       </div>
-    )
-  }
+
+      <div
+        className={
+          s2.hw
+        }
+      >
+        {isLoading ? (
+          <div
+            id={
+              "hw10-loading"
+            }
+          >
+            <Loader />
+          </div>
+        ) : (
+          <SuperButton
+            id={
+              "hw10-button-start-loading"
+            }
+            onClick={
+              setLoading
+            }
+            xType={
+              "default"
+            }
+          >
+            Set
+            loading...
+          </SuperButton>
+        )}
+      </div>
+    </div>
+  )
+}
 
 export default HW10
