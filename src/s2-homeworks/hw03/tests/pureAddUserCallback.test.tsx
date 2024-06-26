@@ -2,20 +2,15 @@ import React from "react"
 import { pureAddUserCallback } from "../HW3"
 
 let initialState: any[]
-const setName =
-  (
-    a: any[],
-  ) => {
-    initialState =
-      a
-  }
+const setName = (
+  a: any[],
+) => {
+  initialState = a
+}
 
-beforeEach(
-  () => {
-    initialState =
-      []
-  },
-)
+beforeEach(() => {
+  initialState = []
+})
 
 test("name 1", () => {
   pureAddUserCallback(
@@ -25,19 +20,13 @@ test("name 1", () => {
   )
   expect(
     initialState.length,
-  ).toBe(
-    1,
-  )
+  ).toBe(1)
   expect(
     initialState[0]
       .name,
-  ).toBe(
-    "name",
-  )
+  ).toBe("name")
   expect(
     !!initialState[0]
       ._id,
-  ).toBe(
-    true,
-  )
+  ).toBe(true)
 })
