@@ -47,9 +47,7 @@ const SuperInputText: React.FC<
       e: ChangeEvent<HTMLInputElement>,
     ) => {
       onChange &&
-        onChange(
-          e,
-        )
+        onChange(e)
       onChangeText &&
         onChangeText(
           e
@@ -69,9 +67,7 @@ const SuperInputText: React.FC<
       onEnter &&
         e.key ===
           "Enter" &&
-        onEnter(
-          e,
-        )
+        onEnter(e)
     }
 
   const finalSpanClassName = `${s.error} ${spanClassName ? spanClassName : ""}`
@@ -86,9 +82,7 @@ const SuperInputText: React.FC<
       }
     >
       <input
-        id={
-          id
-        }
+        id={id}
         type={
           "text"
         }
@@ -114,9 +108,7 @@ const SuperInputText: React.FC<
           finalSpanClassName
         }
       >
-        {
-          error
-        }
+        {error}
       </span>
     </div>
   )
