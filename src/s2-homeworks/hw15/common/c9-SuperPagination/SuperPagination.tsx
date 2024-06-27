@@ -71,9 +71,7 @@ const SuperPagination: React.FC<
             // стили для Pagination // пишет студент
           }
         }
-        page={
-          page
-        }
+        page={page}
         count={
           lastPage
         }
@@ -124,8 +122,7 @@ const SuperPagination: React.FC<
           s.text2
         }
       >
-        строк
-        в
+        строк в
         таблице
       </span>
     </div>
