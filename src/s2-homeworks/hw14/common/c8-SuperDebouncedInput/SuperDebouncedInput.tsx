@@ -46,13 +46,10 @@ const SuperDebouncedInput: React.FC<
   const [
     timerId,
     setTimerId,
-  ] =
-    useState<
-      | number
-      | undefined
-    >(
-      undefined,
-    )
+  ] = useState<
+    | number
+    | undefined
+  >(undefined)
 
   let timeout: NodeJS.Timeout
 
