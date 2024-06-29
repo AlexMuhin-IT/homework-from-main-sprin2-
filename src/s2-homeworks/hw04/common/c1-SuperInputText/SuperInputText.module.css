@@ -3,8 +3,7 @@
 }
 
 .input {
-  border: 1px
-    solid
+  border: 1px solid
     #d1d1d1;
   border-radius: 5px;
   width: 372px;
@@ -25,14 +24,12 @@
 }
 
 .errorInput {
-  border: 1px
-    solid
+  border: 1px solid
     red;
 }
 
 .errorInput:focus {
-  border: 1px
-    solid
+  border: 1px solid
     red;
 }
 
