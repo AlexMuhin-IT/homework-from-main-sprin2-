@@ -65,8 +65,7 @@ const SuperEditableSpan: React.FC<
     defaultText,
     ...restSpanProps
   } =
-    spanProps ||
-    {}
+    spanProps || {}
 
   const onEnterCallback =
     (
@@ -90,9 +89,7 @@ const SuperEditableSpan: React.FC<
       setEditMode(
         false,
       )
-      onBlur?.(
-        e,
-      )
+      onBlur?.(e)
     }
   const onDoubleClickCallBack =
     (
