@@ -6,7 +6,11 @@ import HW9 from "../../hw09/HW9"
 
 function Junior() {
   return (
-    <div id={"hw5-page-junior"}>
+    <div
+      id={
+        "hw5-page-junior"
+      }
+    >
       <HW6 />
       <HW7 />
       <HW8 />
