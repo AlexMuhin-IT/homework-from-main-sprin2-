@@ -15,8 +15,7 @@
 .input {
   font-weight: 400;
   font-size: 14px;
-  border: 1px solid
-    #d1d1d1;
+  border: 1px solid #d1d1d1;
   border-radius: 5px;
   width: 372px;
   height: 36px;
@@ -53,12 +52,7 @@
 .text {
   font-weight: 400;
   font-size: 14px;
-  color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  );
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .greeting {
