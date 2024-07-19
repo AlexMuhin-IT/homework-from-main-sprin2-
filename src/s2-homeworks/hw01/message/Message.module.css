@@ -15,20 +15,16 @@
   background-position: center;
   width: 50px;
   height: 50px;
-  border: 1px solid
-    black;
+  border: 1px solid black;
   border-radius: 50%;
 }
 
 .text {
   margin-right: 15px;
-  padding: 8px 13px
-    0 13px;
+  padding: 8px 13px 0 13px;
   background-color: #0066cc;
-  border: 1px solid
-    #0066cc;
-  border-radius: 10px
-    10px 0 10px;
+  border: 1px solid #0066cc;
+  border-radius: 10px 10px 0 10px;
   position: relative;
   z-index: 0;
 }
@@ -38,15 +34,12 @@
   position: absolute;
   right: -20px;
   bottom: -1px;
-  border: 20px solid
-    transparent;
-  border-bottom: 20px
-    solid #0066cc;
+  border: 20px solid transparent;
+  border-bottom: 20px solid #0066cc;
 }
 
 .name {
-  font-family: "Montserrat",
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-align: end;
@@ -54,16 +47,14 @@
 }
 
 .messageText {
-  font-family: "Montserrat",
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 16px;
   color: #ffffff;
 }
 
 .time {
-  font-family: "Montserrat",
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 10px;
   padding: 5px 10px;
