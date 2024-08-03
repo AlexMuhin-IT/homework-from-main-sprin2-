@@ -1,64 +1,71 @@
 .friendMessage {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .friendImageAndText {
-    display: flex;
-    flex-direction: row;
-
+  display: flex;
+  flex-direction: row;
 }
 
-.friendImageAndText img {
-    background-image: url("./../avatar.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    border-radius: 50%;
+.friendImageAndText
+  img {
+  background-image: url("./../avatar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid
+    black;
+  border-radius: 50%;
 }
 
 .friendText {
-    margin-left: 15px;
-    padding: 8px 13px 0 13px;
-    background-color: #F5F7FB;
-    border: 1px solid #F5F7FB;
-    border-radius: 10px;
+  margin-left: 15px;
+  padding: 8px 13px
+    0 13px;
+  background-color: #f5f7fb;
+  border: 1px solid
+    #f5f7fb;
+  border-radius: 10px;
 
-    position: relative;
-    z-index: 0;
+  position: relative;
+  z-index: 0;
 }
 
 .friendText:after {
-    content: '';
-    position: absolute;
-    left: -20px;
-    bottom: -1px;
-    border: 20px solid transparent;
-    border-bottom: 20px solid #F5F7FB;
-
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -1px;
+  border: 20px solid
+    transparent;
+  border-bottom: 20px
+    solid #f5f7fb;
 }
 
 .friendName {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: #000;
+  font-family: "Montserrat",
+    sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
 }
 
 .friendMessageText {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    color: #000;
+  font-family: "Montserrat",
+    sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
 }
 
 .friendTime {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 10px;
-    padding: 5px 10px;
+  font-family: "Montserrat",
+    sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  padding: 5px 10px;
 }
