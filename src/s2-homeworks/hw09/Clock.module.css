@@ -1,28 +1,33 @@
 .buttonsContainer {
-    display: flex;
-    gap: 20px;
-    margin-top: 55px;
+  display: flex;
+  gap: 20px;
+  margin-top: 55px;
 }
 
 .clock {
-    margin-left: 70px;
-    margin-top: 60px;
-    width: 200px;
+  margin-left: 70px;
+  margin-top: 60px;
+  width: 200px;
 }
 
 .watch {
-    padding-bottom: 10px;
-    font-weight: 400;
-    font-size: 20px;
-    color: #000;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
 }
 
 .watch strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .more {
-    font-weight: 400;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  );
 }

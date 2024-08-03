@@ -1,67 +1,68 @@
 .greetingForm {
-
 }
 
 .inputAndButtonContainer {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 .error {
-    font-weight: 400;
-    font-size: 14px;
-    color: #c00;
-
+  font-weight: 400;
+  font-size: 14px;
+  color: #c00;
 }
 
 .input {
-    font-weight: 400;
-    font-size: 14px;
-    border: 1px solid #d1d1d1;
-    border-radius: 5px;
-    width: 372px;
-    height: 36px;
-
+  font-weight: 400;
+  font-size: 14px;
+  border: 1px solid
+    #d1d1d1;
+  border-radius: 5px;
+  width: 372px;
+  height: 36px;
 }
 
 .input:focus {
 }
 
 .errorInput {
-    border-color: #c00;
+  border-color: #c00;
 }
 
 .button {
-    border-radius: 3px;
-    padding: 5px 24px;
-    width: 78px;
-    height: 36px;
-    background-color: #06c;
-    color: #fff;
+  border-radius: 3px;
+  padding: 5px 24px;
+  width: 78px;
+  height: 36px;
+  background-color: #06c;
+  color: #fff;
 }
 
 .button:focus {
-
 }
 
 .button:active {
-
 }
 
 .button:disabled {
-    background-color: #06c;
-    color: #fff;
-    opacity: 0.5;
+  background-color: #06c;
+  color: #fff;
+  opacity: 0.5;
 }
 
 .text {
-    font-weight: 400;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  );
 }
 
 .greeting {
-    font-weight: 500;
-    font-size: 14px;
-    color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
 }
