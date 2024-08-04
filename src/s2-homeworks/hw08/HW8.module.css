@@ -1,42 +1,43 @@
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .buttonsContainer {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .users {
-    border-collapse: collapse;
-    width: 600px;
+  border-collapse: collapse;
+  width: 600px;
 }
 
 .thead {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 .nameCol {
-    font-size: 14px;
-    color: #000;
-    padding: 10px;
+  font-size: 14px;
+  color: #000;
+  padding: 10px;
 }
 
 .ageCol {
-    padding: 10px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #000;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
 }
 .userRow {
 }
 .item {
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px
+    solid #ddd;
 }
 
 .item:last-of-type {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .users {
@@ -49,5 +50,4 @@
 }
 
 .thead {
-
 }
