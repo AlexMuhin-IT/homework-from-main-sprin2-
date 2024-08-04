@@ -1,41 +1,81 @@
-import React, {useState} from 'react'
-import {v1} from 'uuid'
-import s2 from '../../s1-main/App.module.css'
-import GreetingContainer from './GreetingContainer'
+import React, {
+  useState,
+} from "react"
+import { v1 } from "uuid"
+import s2 from "../../s1-main/App.module.css"
+import GreetingContainer from "./GreetingContainer"
 
-export type UserType = {
+export type UserType =
+  {
     _id: string
     name: string
-}
+  }
 
-export const pureAddUserCallback = (name: string, setUsers: (u:UserType[])=>void, users: UserType[]) => {
-    const user:UserType = {
+export const pureAddUserCallback =
+  (
+    name: string,
+    setUsers: (
+      u: UserType[],
+    ) => void,
+    users: UserType[],
+  ) => {
+    const user: UserType =
+      {
         _id: v1(),
         name: name,
-    }
-    setUsers([...users, user])
-}
+      }
+    setUsers([
+      ...users,
+      user,
+    ])
+  }
 
 const HW3 = () => {
-    const [users, setUsers] = useState<UserType[]>([])
+  const [
+    users,
+    setUsers,
+  ] = useState<
+    UserType[]
+  >([])
 
-    const addUserCallback = (name: string) => {
-        pureAddUserCallback(name, setUsers, users)
+  const addUserCallback =
+    (
+      name: string,
+    ) => {
+      pureAddUserCallback(
+        name,
+        setUsers,
+        users,
+      )
     }
 
-    return (
-        <div id={'hw3'}>
-            <div className={s2.hwTitle}>Homework #3</div>
-            {/*для автоматической проверки дз (не менять)*/}
+  return (
+    <div id={"hw3"}>
+      <div
+        className={
+          s2.hwTitle
+        }
+      >
+        Homework #3
+      </div>
+      {/*для автоматической проверки дз (не менять)*/}
 
-            <div className={s2.hw}>
-                <GreetingContainer
-                    users={users}
-                    addUserCallback={addUserCallback}
-                />
-            </div>
-        </div>
-    )
+      <div
+        className={
+          s2.hw
+        }
+      >
+        <GreetingContainer
+          users={
+            users
+          }
+          addUserCallback={
+            addUserCallback
+          }
+        />
+      </div>
+    </div>
+  )
 }
 
 export default HW3
