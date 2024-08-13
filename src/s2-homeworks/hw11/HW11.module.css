@@ -1,20 +1,20 @@
 .container {
-    width: 230px;
-    height: 80px;
+  width: 230px;
+  height: 80px;
 }
 .wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
 }
 .number {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 125%;
-    color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
 }
 .number:last-child {
-    position: absolute;
-    left: 270px;
+  position: absolute;
+  left: 270px;
 }
