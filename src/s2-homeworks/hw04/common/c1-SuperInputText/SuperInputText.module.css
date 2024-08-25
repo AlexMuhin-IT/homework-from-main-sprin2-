@@ -1,37 +1,39 @@
 .input:focus {
-    outline: none;
+  outline: none;
 }
 
 .input {
-    border: 1px solid #d1d1d1;
-    border-radius: 5px;
-    width: 372px;
-    height: 36px;
+  border: 1px solid
+    #d1d1d1;
+  border-radius: 5px;
+  width: 372px;
+  height: 36px;
 
-    font-weight: 500;
-    font-size: 16px;
-    color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
 }
 
 .inputWrapper {
-    display: flex;
-    flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .superInput {
-margin-bottom: 16px;
-
+  margin-bottom: 16px;
 }
 
 .errorInput {
-    border: 1px solid red;
+  border: 1px solid
+    red;
 }
 
 .errorInput:focus {
-    border: 1px solid red;
+  border: 1px solid
+    red;
 }
 
 .error {
-    color: red;
-    /*height: 21px;*/
+  color: red;
+  /*height: 21px;*/
 }
