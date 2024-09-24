@@ -1,5 +1,8 @@
 import React from "react"
-import { AffairType, filterAffairs } from "../HW2"
+import {
+  AffairType,
+  filterAffairs,
+} from "../HW2"
 
 let initialState: AffairType[]
 
@@ -8,44 +11,73 @@ beforeEach(() => {
     {
       _id: 1,
       name: "React",
-      priority: "high",
+      priority:
+        "high",
     },
     {
       _id: 2,
       name: "anime",
-      priority: "low",
+      priority:
+        "low",
     },
     {
       _id: 3,
       name: "games",
-      priority: "low",
+      priority:
+        "low",
     },
     {
       _id: 4,
       name: "work",
-      priority: "high",
+      priority:
+        "high",
     },
     {
       _id: 5,
       name: "html & css",
-      priority: "middle",
+      priority:
+        "middle",
     },
   ]
 })
 
 test("filter by all", () => {
-  const newState = filterAffairs(initialState, "all")
-  expect(newState.length).toBe(5)
+  const newState =
+    filterAffairs(
+      initialState,
+      "all",
+    )
+  expect(
+    newState.length,
+  ).toBe(5)
 })
 test("filter by high", () => {
-  const newState = filterAffairs(initialState, "high")
-  expect(newState.length).toBe(2)
+  const newState =
+    filterAffairs(
+      initialState,
+      "high",
+    )
+  expect(
+    newState.length,
+  ).toBe(2)
 })
 test("filter by middle", () => {
-  const newState = filterAffairs(initialState, "middle")
-  expect(newState.length).toBe(1)
+  const newState =
+    filterAffairs(
+      initialState,
+      "middle",
+    )
+  expect(
+    newState.length,
+  ).toBe(1)
 })
 test("filter by low", () => {
-  const newState = filterAffairs(initialState, "low")
-  expect(newState.length).toBe(2)
+  const newState =
+    filterAffairs(
+      initialState,
+      "low",
+    )
+  expect(
+    newState.length,
+  ).toBe(2)
 })
