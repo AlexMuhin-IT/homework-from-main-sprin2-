@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import s from './Stand.module.css'
 import SuperInputText from './common/c1-SuperInputText/SuperInputText'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
@@ -10,6 +10,22 @@ const Stand = () => {
 
     const [stateForAllCheckboxes, setChecked] = useState<boolean>(false)
 
+    const handleInputEnter = () => {
+        if (stateForAllInputs.trim() === '') {
+            setError('Error');
+        } else {
+            setError('');
+            setValue('');
+        }
+    };
+    const handleInputChange = (value: string) => {
+        setValue(value);
+        if (value.trim() !== '') {
+            setError('');
+        }
+    };
+
+
     return (
         <div id={'hw4-stand'} className={s.stand}>
             <div className={s.inputs}>
@@ -18,7 +34,9 @@ const Stand = () => {
                     <SuperInputText
                         id={'hw4-super-input-like-old'}
                         value={stateForAllInputs}
-                        onChange={(e) => setValue(e.currentTarget.value)}
+                        onChange={(e)=>handleInputChange(e.target.value)}
+                        onEnter={handleInputEnter}
+
                     />
                 </div>
                 {/*инпут с ошибкой:*/}
@@ -26,16 +44,10 @@ const Stand = () => {
                     <SuperInputText
                         id={'hw4-super-input-with-error'}
                         value={stateForAllInputs}
-                        onChangeText={setValue}
+                        onChange={(e)=>handleInputChange(e.target.value)}
+                        onChangeText={handleInputChange}
                         error={error}
-                        onEnter={() => {
-                            setError(
-                                stateForAllInputs.trim()
-                                    ? ''
-                                    : 'Error'
-                            )
-                            setValue('')
-                        }}
+                        onEnter={handleInputEnter}
                     />
                 </div>
             </div>
@@ -43,14 +55,19 @@ const Stand = () => {
             <div className={s.buttons}>
                 {/*обычная кнопка:*/}
                 <div>
-                    <SuperButton id={'hw4-super-button-default'}>
-                        default
+                    <SuperButton
+                        id={'hw4-super-button-default'}
+                        xType={'default'}
+                    >Дефолтная
                     </SuperButton>
                 </div>
                 {/*красная кнопка:*/}
                 <div>
-                    <SuperButton id={'hw4-super-button-red'} xType={'red'}>
-                        red
+                    <SuperButton
+                        id={'hw4-super-button-red'}
+                        xType={'red'}
+
+                    >Опасность
                     </SuperButton>
                 </div>
                 {/*задизэйбленная кнопка:*/}
@@ -59,8 +76,8 @@ const Stand = () => {
                         id={'hw4-super-button-disabled'}
                         xType={'red'}
                         disabled
-                    >
-                        disabled
+
+                    >Не активна
                     </SuperButton>
                 </div>
                 {/*задизэйбленная кнопка:*/}
@@ -68,8 +85,8 @@ const Stand = () => {
                     <SuperButton
                         id={'hw4-super-button-secondary'}
                         xType={'secondary'}
-                    >
-                        secondary
+
+                    >Дополнительная
                     </SuperButton>
                 </div>
             </div>
@@ -82,7 +99,7 @@ const Stand = () => {
                         checked={stateForAllCheckboxes}
                         onChangeChecked={setChecked}
                     >
-                        some text
+                        Hometask
                     </SuperCheckbox>
                 </div>
                 {/*совместим со старым кодом:*/}
