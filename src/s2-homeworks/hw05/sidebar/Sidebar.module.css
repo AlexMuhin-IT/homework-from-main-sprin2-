@@ -40,11 +40,12 @@
 }
 
 .nav a:hover {
+    color: #58acff;
 }
 
 .nav a.active {
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
+    /*text-decoration: underline;*/
+    /*text-decoration-skip-ink: none;*/
     color: #0059b2;
 }
 .close {
