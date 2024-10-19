@@ -8,12 +8,12 @@ import {PATH} from "../Pages";
 
 function Junior() {
     return (
-        <NavLink to={PATH.JUNIOR} id={'hw5-page-junior'}>
+        <div id={'hw5-page-junior'}>
             {/*<HW6 />*/}
             {/*<HW7 />*/}
             {/*<HW8 />*/}
             {/*<HW9 />*/}
-        </NavLink>
+        </div>
     )
 }
 

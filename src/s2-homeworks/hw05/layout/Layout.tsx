@@ -1,6 +1,9 @@
 import React, { FC, ReactNode, useEffect, useState } from 'react'
 import { Header } from '../header/Header'
 import { Sidebar } from '../sidebar/Sidebar'
+import PreJunior from "../pages/PreJunior";
+import Junior from "../pages/Junior";
+import JuniorPlus from "../pages/JuniorPlus";
 
 type PropsType = {
     children: ReactNode
@@ -8,7 +11,7 @@ type PropsType = {
 
 export const Layout: FC<PropsType> = ({ children }) => {
     const [open, setOpen] = useState(false)
-    const handleClose = () => setOpen(false)
+    const handleClose = () => setOpen(true)
     const handleOpen = () => setOpen(true)
 
     useEffect(() => {
@@ -22,6 +25,9 @@ export const Layout: FC<PropsType> = ({ children }) => {
             <Header handleOpen={handleOpen} />
             <div>
                 {/*страницы*/}
+                {/*<PreJunior/>*/}
+                {/*<Junior/>*/}
+                {/*<JuniorPlus/>*/}
                 {children}
             </div>
         </>

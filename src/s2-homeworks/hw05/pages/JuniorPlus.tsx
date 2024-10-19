@@ -10,14 +10,14 @@ import {PATH} from "../Pages";
 
 function JuniorPlus() {
     return (
-        <NavLink to={PATH.JUNIOR_PLUS} id={'hw5-page-junior-plus'}>
+        <div id={'hw5-page-junior-plus'}>
             {/*<HW10 />*/}
             {/*<HW11 />*/}
             {/*<HW12 />*/}
             {/*<HW13 />*/}
             {/*<HW14 />*/}
             {/*<HW15 />*/}
-        </NavLink>
+        </div>
     )
 }
 
