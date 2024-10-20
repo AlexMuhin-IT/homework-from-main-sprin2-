@@ -41,16 +41,15 @@
 }
 
 .nav a:hover {
-    color: #58acff;
+    color: #0059b2;
+    text-decoration: underline;
 }
 
 .nav a.active {
-    /*text-decoration: underline;*/
     /*text-decoration-skip-ink: none;*/
-    color: #0059b2;
+    color: #58acff;
 }
 .close {
-    /*display: none;*/
     position: fixed;
     top: 15px;
     right: 25px;
