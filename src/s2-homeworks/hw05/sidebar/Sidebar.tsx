@@ -13,10 +13,12 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
     const sidebarClass = s.sidebar
         + (open ? ' ' + s.open : '')
 
+    // const inputClass = error ? `${s.input} ${s.errorInput}` : s.input
+    // const navLinkClass = open ? `${s.nav} ${s.active}` : s.nav
 
-    const navLinkClass = s.nav
-      +  s.active
-    // `${s.nav} ${isActive ? s.active : ''}`.trim()
+
+    // const navLinkClass = s.nav
+    //   + {(${isActive}) ? s.nav + ''+ s.active : ''}
     // +  ('active' ? + '' + s.active : '')
     // ({ isActive }) => isActive ? `${s.nav} ${s.active} : s.nav;
     // ${'active' ? s.active : s.nav}
@@ -41,10 +43,8 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         id={'hw5-pre-junior-link'}
                         to={PATH.PRE_JUNIOR}
                         onClick={handleClose}
-                        className={
-                            // navLinkClass
-                            ({ isActive }) => isActive ? `${s.nav} ${s.active}` : s.nav
-                        } // делает студент
+                        // className={navLinkClass}
+                        className={({ isActive }) => isActive ? `${s.nav} ${s.active}` : s.nav}
                     >
                         Pre-junior
                     </NavLink>
@@ -52,10 +52,8 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         id={'hw5-junior-link'}
                         to={PATH.JUNIOR}
                         onClick={handleClose}
-                        className={
-                            // navLinkClass
-                            ({ isActive }) => isActive ? `${s.nav} ${s.active}` : s.nav
-                        } // делает студент
+                        // className={navLinkClass}
+                        className={({ isActive }) => isActive ? `${s.nav} ${s.active}` : s.nav}
                     >
                         Junior
                     </NavLink>
@@ -63,7 +61,8 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         id={'hw5-junior-plus-link'}
                         to={PATH.JUNIOR_PLUS}
                         onClick={handleClose}
-                        className={({isActive}) => isActive ? `${s.nav} ${s.active}` : s.nav} // делает студент
+                        // className={navLinkClass}
+                        className={({isActive}) => isActive ? `${s.nav} ${s.active}` : s.nav}
                     >
                         Junior Plus
                     </NavLink>

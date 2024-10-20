@@ -17,17 +17,13 @@ export const Layout: FC<PropsType> = ({ children }) => {
     useEffect(() => {
         open && (document.body.style.overflow = 'hidden')
         !open && (document.body.style.overflow = 'unset')
-    }, [open]) // отключает прокрутку при открытом меню
+    }, [open])
 
     return (
         <>
             <Sidebar open={open} handleClose={handleClose} />
             <Header handleOpen={handleOpen} />
             <div>
-                {/*страницы*/}
-                {/*<PreJunior/>*/}
-                {/*<Junior/>*/}
-                {/*<JuniorPlus/>*/}
                 {children}
             </div>
         </>
