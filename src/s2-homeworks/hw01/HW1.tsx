@@ -49,6 +49,7 @@ export const friendMessage0: MessageType = {
         avatar: avatar, // можно менять
         name: 'Ivan', // можно менять
     },
+
     message: {
         text: 'Hello, how are you, what did you do yesterday?', // можно менять
         time: '00:00', // можно менять
