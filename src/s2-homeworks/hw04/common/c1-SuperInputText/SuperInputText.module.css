@@ -7,6 +7,10 @@
     border-radius: 5px;
     width: 372px;
     height: 36px;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
 }
 
 .inputWrapper {
@@ -15,7 +19,7 @@
 }
 
 .superInput {
-
+margin-bottom: 16px;
 
 }
 
@@ -29,5 +33,5 @@
 
 .error {
     color: red;
-    height: 21px;
+    /*height: 21px;*/
 }
