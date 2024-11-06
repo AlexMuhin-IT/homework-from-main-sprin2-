@@ -50,7 +50,8 @@
 }
 
 .secondary:active {
-    background: #c9e5ff;
+    color: #fff;
+    background: #0059b2;
 }
 
 .red:active {
@@ -58,4 +59,7 @@
 }
 
 .button:disabled {
+    /*background-color: #06c;*/
+    color: #fff;
+    background: #0059b2;
 }

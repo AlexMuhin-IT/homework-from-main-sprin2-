@@ -53,7 +53,6 @@ const Stand = () => {
             </div>
 
             <div className={s.buttons}>
-                {/*обычная кнопка:*/}
                 <div>
                     <SuperButton
                         id={'hw4-super-button-default'}
@@ -66,33 +65,27 @@ const Stand = () => {
                     <SuperButton
                         id={'hw4-super-button-red'}
                         xType={'red'}
-
                     >Опасность
                     </SuperButton>
                 </div>
-                {/*задизэйбленная кнопка:*/}
                 <div>
                     <SuperButton
                         id={'hw4-super-button-disabled'}
                         xType={'red'}
                         disabled
-
                     >Не активна
                     </SuperButton>
                 </div>
-                {/*задизэйбленная кнопка:*/}
                 <div>
                     <SuperButton
                         id={'hw4-super-button-secondary'}
                         xType={'secondary'}
-
                     >Дополнительная
                     </SuperButton>
                 </div>
             </div>
 
             <div className={s.checkboxes}>
-                {/*чекбокс с текстом:*/}
                 <div>
                     <SuperCheckbox
                         id={'hw4-super-checkbox-with-text'}
@@ -102,7 +95,6 @@ const Stand = () => {
                         Hometask
                     </SuperCheckbox>
                 </div>
-                {/*совместим со старым кодом:*/}
                 <div>
                     <SuperCheckbox
                         id={'hw4-super-checkbox-like-old'}
