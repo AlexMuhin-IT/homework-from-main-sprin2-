@@ -1,41 +1,6 @@
-/*.item {*/
-/*}*/
-
-/*.item:last-of-type {*/
-/*}*/
-
-/*.users {*/
-/*}*/
-
-/*.buttonsContainer {*/
-/*}*/
-
-/*.container {*/
-/*}*/
-
-/*.thead {*/
-
-/*}*/
-
-.nameCol {
-    /*font-weight: 600;*/
-    font-size: 14px;
-    color: #000;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-.ageCol {
-    padding: 10px;
-    border: 1px solid #ddd;
-    font-weight: 600;
-    font-size: 14px;
-    color: #000;
-}
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .buttonsContainer {
@@ -52,7 +17,37 @@
 .thead {
     background-color: #f2f2f2;
 }
+.nameCol {
+    font-size: 14px;
+    color: #000;
+    padding: 10px;
+}
 
+.ageCol {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+}
 .userRow {
+}
+.item {
     border-bottom: 1px solid #ddd;
+}
+
+.item:last-of-type {
+    border-bottom: none;
+}
+
+.users {
+}
+
+.buttonsContainer {
+}
+
+.container {
+}
+
+.thead {
+
 }
