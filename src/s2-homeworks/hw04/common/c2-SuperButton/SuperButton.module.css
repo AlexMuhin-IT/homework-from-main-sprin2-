@@ -14,6 +14,7 @@
     opacity: 0.5;
 }
 
+
 .secondary {
     border: 1px solid #06c;
     border-radius: 3px;
@@ -59,7 +60,7 @@
 }
 
 .button:disabled {
-    /*background-color: #06c;*/
     color: #fff;
-    background: #0059b2;
+    background: #06c;
+    opacity: 0.4;
 }
