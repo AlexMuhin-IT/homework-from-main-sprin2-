@@ -14,7 +14,7 @@ export const loadingReducer = (state = initState, action: LoadingActionType): ty
 }
 
 
-export const loadingAC = (isLoading: boolean) => ({
+export const loadingAC = (isLoading: boolean):LoadingActionType => ({
     type: 'CHANGE_LOADING',
     isLoading,
 })
