@@ -43,6 +43,7 @@ const HW10 = () => {
 					<SuperButton
 						id={'hw10-button-start-loading'}
 						onClick={setLoading}
+						xType={'default'}
 					>
 						Set loading...
 					</SuperButton>
