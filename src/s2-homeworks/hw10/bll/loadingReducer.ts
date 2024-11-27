@@ -1,6 +1,6 @@
 
 const initState = {
-    isLoading: false,
+    isLoading: true,
 }
 
 export const loadingReducer = (state = initState, action: LoadingActionType): typeof initState=> { // fix any
