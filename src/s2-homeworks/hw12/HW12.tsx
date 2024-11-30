@@ -12,7 +12,7 @@ import {changeThemeId} from './bll/themeReducer'
 * 4 - передать пропсы в SuperSelect
 * */
 
-const themes = [
+export const themes = [
     {id: 1, value: 'light'},
     {id: 2, value: 'blue'},
     {id: 3, value: 'dark'},
@@ -20,6 +20,7 @@ const themes = [
 
 const HW12 = () => {
     // взять ид темы из редакса
+
     const themeId = 1
 
     const change = (id: any) => { // дописать функцию
