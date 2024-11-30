@@ -46,6 +46,8 @@ function HW11() {
 						<SuperRange // сделать так чтоб value1/2 изменялось // пишет студент
 							id={'hw11-double-slider'}
 							value={[value1, value2]}
+							onChange={change}
+
 						/>
 
 						<span id={'hw11-value-2'} className={s.number}>{value2}</span>
