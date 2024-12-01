@@ -20,12 +20,11 @@ export const themes = [
 ]
 
 const HW12 = () => {
-	// взять ид темы из редакса
-	// const themeId = 1
+
 	const themeId = useSelector<AppStoreType, number>(state => state.theme.themeId)
 	const dispatch = useDispatch()
 	console.log(themeId)
-	const change = (id: any) => { // дописать функцию
+	const change = (id: any) => {
 		dispatch(changeThemeId(id))
 	}
 
