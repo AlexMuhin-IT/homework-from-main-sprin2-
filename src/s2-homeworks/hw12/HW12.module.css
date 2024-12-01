@@ -10,7 +10,7 @@
 
 [data-theme='3'] {
     --color: #FFFFFF;
-    --background: #212A34;
+    --background: rgba(52, 33, 38, 0.79);
 }
 
 html {
