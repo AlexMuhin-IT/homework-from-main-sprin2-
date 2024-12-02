@@ -42,13 +42,11 @@ export const message0: MessageType = {
     },
 }
 export const friendMessage0: MessageType = {
-
     id: 100,
     user: {
         avatar: avatar,
         name: 'Ivan',
     },
-
     message: {
         text: 'Hello, how are you, what did you do yesterday?',
         time: '00:00',
