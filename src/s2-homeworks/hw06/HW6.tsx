@@ -19,9 +19,7 @@ const HW6 = () => {
         saveState('span-value', value)
     }
     const restore = () => {
-        // делают студенты
         setValue(restoreState('span-value', ''))
-
     }
 
     return (
