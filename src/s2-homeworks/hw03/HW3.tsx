@@ -20,12 +20,12 @@ import GreetingContainer from './GreetingContainer'
 
 // types
 export type UserType = {
-    _id: string // need to fix any
-    name: string // need to fix any
+    _id: string
+    name: string
 }
 
-export const pureAddUserCallback = (name: string, setUsers: (u:UserType[])=>void, users: UserType[]) => { // need to fix any
-    const user:UserType = { // need to fix
+export const pureAddUserCallback = (name: string, setUsers: (u:UserType[])=>void, users: UserType[]) => {
+    const user:UserType = {
         _id: v1(),
         name: name,
     }
@@ -33,9 +33,9 @@ export const pureAddUserCallback = (name: string, setUsers: (u:UserType[])=>void
 }
 
 const HW3 = () => {
-    const [users, setUsers] = useState<UserType[]>([]) // need to fix any
+    const [users, setUsers] = useState<UserType[]>([])
 
-    const addUserCallback = (name: string) => { // need to fix any
+    const addUserCallback = (name: string) => {
         pureAddUserCallback(name, setUsers, users)
     }
 
