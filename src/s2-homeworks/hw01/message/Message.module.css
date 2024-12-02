@@ -10,7 +10,6 @@
 }
 
 .imageAndText img {
-    /*background-image: url("./../avatar.png");*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
