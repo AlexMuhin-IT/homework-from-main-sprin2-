@@ -1,13 +1,28 @@
-import React, { ButtonHTMLAttributes, DetailedHTMLProps } from "react"
+import React, {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+} from "react"
 import s from "./SuperButton.module.css"
 
-type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+type DefaultButtonPropsType =
+  DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >
 
-type SuperButtonPropsType = DefaultButtonPropsType & {
-  xType?: string
-}
+type SuperButtonPropsType =
+  DefaultButtonPropsType & {
+    xType?: string
+  }
 
-const SuperButton: React.FC<SuperButtonPropsType> = ({ xType, className, disabled, ...restProps }) => {
+const SuperButton: React.FC<
+  SuperButtonPropsType
+> = ({
+  xType,
+  className,
+  disabled,
+  ...restProps
+}) => {
   const finalClassName = `${s.button} + 
     ${xType === "default" ? s.default : ""}
     ${disabled ? s.disabled + s.action : ""}
@@ -16,8 +31,18 @@ const SuperButton: React.FC<SuperButtonPropsType> = ({ xType, className, disable
     ${xType === "secondary" ? s.secondary : ""}`
 
   return (
-    <button disabled={disabled} className={finalClassName} {...restProps}>
-      {restProps.children}
+    <button
+      disabled={
+        disabled
+      }
+      className={
+        finalClassName
+      }
+      {...restProps}
+    >
+      {
+        restProps.children
+      }
     </button>
   )
 }
