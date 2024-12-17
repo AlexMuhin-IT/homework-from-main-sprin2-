@@ -1,6 +1,4 @@
 import React from 'react'
-import {NavLink} from "react-router-dom";
-import {PATH} from "../Pages";
 import HW6 from '../../hw06/HW6'
 import HW7 from '../../hw07/HW7'
 import HW8 from '../../hw08/HW8'
