@@ -1,22 +1,50 @@
 .buttonsContainer {
+    display: flex;
+    width: 700px;
+    button{
+        margin-left: 24px;
+        width: auto;
+    }
+    margin-bottom: 90px;
 }
 
 .responseContainer {
+    display: flex;
+    width: 1050px;
+    height: 195px;
 }
 
 .imageContainer {
+    width: 450px;
+    height: 200px;
+    margin-right: 90px;
 }
 
 .image {
+    width: 450px;
+    height: 200px;
 }
 
 .textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .code {
+    font-weight: 500;
+    font-size: 30px;
+    color: #000;
+    padding-bottom: 15px;
 }
 
 .text {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
 }
 .info {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
 }
