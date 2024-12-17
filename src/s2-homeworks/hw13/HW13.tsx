@@ -8,12 +8,6 @@ import error400 from './images/400.svg'
 import error500 from './images/500.svg'
 import errorUnknown from './images/error.svg'
 
-/*
-* 1 - дописать функцию send
-* 2 - дизэйблить кнопки пока идёт запрос
-* 3 - сделать стили в соответствии с дизайном
-* */
-
 const HW13 = () => {
 	const [code, setCode] = useState('')
 	const [text, setText] = useState('')
@@ -25,7 +19,7 @@ const HW13 = () => {
 	const send = (x?: boolean | null) => () => {
 		const url =
 			x === null
-				? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
+				? 'https://xxxxxx.ccc'
 				: 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
 		setCode('')
@@ -34,54 +28,37 @@ const HW13 = () => {
 		setInfo('...loading')
 		setLoading(true)
 
+
 		axios
 			.post(url, {success: x})
 			.then((res) => {
-				console.log(res)
-
-				// console.log(res.status)
-
-				// setCode('Код' + res.data.status + '!')
-				// setCode(`Код ${res.data.status} !`)
-				setCode(`Код ${res.status}!`)
+				setCode('Код ' + res.status + '!')
 				setImage(success200)
-
 				setText(res.data.errorText)
 				setInfo(res.data.info)
 			})
-
 			.catch((e) => {
 				console.log(e)
-				if (e.response) {
-					if (e.response.status === 400) {
-						console.log(e.response.status === 400)
-						// setCode('Код' + e.response.status + '!')
-						// setCode(`Код ${e.response.status} !`)
-						setCode(e.response.status)
-						setText(e.response.data.errorText)
-						setInfo(e.response.data.info)
-						setImage(error400)
-
-					} else if (e.response.status === 500) {
-						// setCode('Код' + e.response.status + '!')
-						// setCode(`Код ${e.response.status} !`)
-						setCode(`Ошибка ${e.response.status}!`)
-						setText(e.response.data.errorText)
-						setInfo(e.response.data.info)
-						setImage(error500)
-					}
-				} else  {
-					console.log(e)
-					// setLoading(false)
-					setInfo('')
-					setCode('Error!');
-					setText(e.message);
-					setInfo(e.name)
-					setImage(errorUnknown);
+				if (e.response.status === 400) {
+					setCode(`Ошибка ${e.response.status} !`)
+					setText(e.response.data.errorText)
+					setInfo(e.response.data.info)
+					setImage(error400)
+					return
 				}
+				if (e.response.status === 500) {
+					setCode(`Ошибка ${e.response.status}!`)
+					setText(e.response.data.errorText)
+					setInfo(e.response.data.info)
+					setImage(error500)
+					return
+				}
+				setCode('Error!');
+				setText(e.message);
+				setInfo(e.name)
+				setImage(errorUnknown);
 			})
 			.finally(() => {
-				// setInfo('')
 				setLoading(false);
 			})
 	}
@@ -89,7 +66,6 @@ const HW13 = () => {
 	return (
 		<div id={'hw13'}>
 			<div className={s2.hwTitle}>Homework #13</div>
-
 			<div className={s2.hw}>
 				<div className={s.buttonsContainer}>
 					<SuperButton
@@ -105,7 +81,6 @@ const HW13 = () => {
 						onClick={send(false)}
 						xType={'secondary'}
 						disabled={loading}
-
 					>
 						Send false
 					</SuperButton>
@@ -114,7 +89,6 @@ const HW13 = () => {
 						onClick={send(undefined)}
 						xType={'secondary'}
 						disabled={loading}
-
 					>
 						Send undefined
 					</SuperButton>
@@ -123,7 +97,6 @@ const HW13 = () => {
 						onClick={send(null)}
 						xType={'secondary'}
 						disabled={loading}
-
 					>
 						Send null
 					</SuperButton>
