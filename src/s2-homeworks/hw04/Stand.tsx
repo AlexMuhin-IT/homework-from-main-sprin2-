@@ -36,7 +36,6 @@ const Stand = () => {
                         value={stateForAllInputs}
                         onChange={(e)=>handleInputChange(e.target.value)}
                         onEnter={handleInputEnter}
-
                     />
                 </div>
                 {/*инпут с ошибкой:*/}
