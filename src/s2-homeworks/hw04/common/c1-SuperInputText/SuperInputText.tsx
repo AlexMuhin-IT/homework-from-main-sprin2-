@@ -1,13 +1,5 @@
-import React, {
-    ChangeEvent,
-    DetailedHTMLProps,
-    InputHTMLAttributes,
-    KeyboardEvent,
-    ReactNode,
-} from 'react'
+import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, KeyboardEvent, ReactNode,} from 'react'
 import s from './SuperInputText.module.css'
-import {Simulate} from "react-dom/test-utils";
-
 
 
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>,
