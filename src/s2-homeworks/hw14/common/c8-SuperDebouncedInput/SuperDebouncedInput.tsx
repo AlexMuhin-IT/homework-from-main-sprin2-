@@ -3,47 +3,51 @@ import SuperInputText from '../../../hw04/common/c1-SuperInputText/SuperInputTex
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement>
+	HTMLInputElement>
 
 // здесь мы говорим что у нашего инпута будут такие же пропсы как у обычного инпута, кроме type
 // (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
 export type SuperDebouncedInputPropsType = Omit<DefaultInputPropsType, 'type'> & {
-    // и + ещё пропсы которых нет в стандартном инпуте
-    onChangeText?: (value: string) => void
-    onEnter?: () => void
-    error?: ReactNode
-    spanClassName?: string
+	// и + ещё пропсы которых нет в стандартном инпуте
+	onChangeText?: (value: string) => void
+	onEnter?: () => void
+	error?: ReactNode
+	spanClassName?: string
 } // илм экспортировать тип SuperInputTextPropsType
-    & { // плюс специальный пропс SuperPagination
-    onDebouncedChange?: (value: string) => void
+	& { // плюс специальный пропс SuperPagination
+	onDebouncedChange?: (value: string) => void
 }
 
 const SuperDebouncedInput: React.FC<SuperDebouncedInputPropsType> = (
-    {
-        onChangeText,
-        onDebouncedChange,
+	{
+		onChangeText,
+		onDebouncedChange,
 
-        ...restProps // все остальные пропсы попадут в объект restProps
-    }
+		...restProps // все остальные пропсы попадут в объект restProps
+	}
 ) => {
-    const [timerId, setTimerId] = useState<number | undefined>(undefined)
+	const [timerId, setTimerId] = useState<number | undefined>(undefined)
 
-    const onChangeTextCallback = (value: string) => {
-        onChangeText?.(value)
+	let timeout: NodeJS.Timeout
 
-        if (onDebouncedChange) {
-            // делает студент
+	const onChangeTextCallback = (value: string) => {
+		onChangeText?.(value)
 
-            // остановить предыдущий таймер
-            // запустить новый на 1500ms, в котором вызовется функция
+		if (onDebouncedChange) {
+			clearTimeout(timeout);
 
-            //
-        }
-    }
+			timeout = setTimeout(() => {
+				onDebouncedChange(value)
+				setTimerId(1500)
+			}, timerId);
+			onChangeText?.(value)
+		}
+	}
 
-    return (
-        <SuperInputText onChangeText={onChangeTextCallback} {...restProps}/>
-    )
+	return (
+		<SuperInputText onChangeText={onChangeTextCallback} {...restProps}/>
+	)
 }
 
 export default SuperDebouncedInput
+
