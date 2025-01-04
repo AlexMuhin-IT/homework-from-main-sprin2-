@@ -67,14 +67,14 @@ const HW15 = () => {
 	const onChangePagination = (newPage: number, newCount: number) => {
 		setPage(newPage)
 		setCount(newCount)
-		sendQuery({count:newCount, page: newPage, sort})
+		sendQuery({count: newCount, page: newPage, sort})
 		setSearchParams({page: newPage.toString(), count: newCount.toString(), sort})
 	}
 
 	const onChangeSort = (newSort: string) => {
 		setSort(newSort)
 		setPage(1)
-		sendQuery({count, page: 1, sort:newSort})
+		sendQuery({count, page: 1, sort: newSort})
 		setSearchParams({page: '1', count: count.toString(), sort: newSort})
 	}
 
