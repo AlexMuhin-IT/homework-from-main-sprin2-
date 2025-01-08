@@ -40,9 +40,7 @@ const SuperCheckbox: React.FC<
       e: ChangeEvent<HTMLInputElement>,
     ) => {
       onChange &&
-        onChange(
-          e,
-        )
+        onChange(e)
       onChangeChecked &&
         onChangeChecked(
           e
@@ -60,9 +58,7 @@ const SuperCheckbox: React.FC<
       }
     >
       <input
-        id={
-          id
-        }
+        id={id}
         type={
           "checkbox"
         }
@@ -86,9 +82,7 @@ const SuperCheckbox: React.FC<
             s.spanClassName
           }
         >
-          {
-            children
-          }
+          {children}
         </span>
       )}
     </label> // благодаря label нажатие на спан передастся в инпут
