@@ -76,9 +76,7 @@ const SuperRadio: React.FC<
   const mappedOptions: any[] =
     options
       ? options.map(
-          (
-            o,
-          ) => (
+          (o) => (
             <label
               key={
                 name +
